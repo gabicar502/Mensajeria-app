@@ -1,13 +1,15 @@
 # Sitio web de Mensajeria-app
 
-Sitio estático de tres páginas. No necesita compilarse ni instalar nada: son HTML y CSS.
+Sitio estático de tres páginas preparado para publicarse en Vercel con Vite.
 
 ```
 index.html        Portada: servicio, cómo funciona, consentimiento y datos del negocio
 privacidad.html   Política de privacidad (Ley 1581 de 2012)
 terminos.html     Términos del servicio
 estilos.css       Estilos compartidos por las tres páginas
-vercel.json       Configuración de Vercel para publicar como sitio estático
+package.json      Scripts de desarrollo y build
+vite.config.js    Build multipágina para incluir todos los HTML
+vercel.json       Configuración de Vercel
 .gitignore        Archivos locales que no deben subirse al repositorio
 ```
 
@@ -39,11 +41,26 @@ La rama principal debe ser `main`.
 
 ## Publicar en Vercel
 
-### Opción A — arrastrar la carpeta (lo más rápido)
+## Desarrollo local
+
+```bash
+npm install
+npm run dev
+```
+
+## Build local
+
+```bash
+npm run build
+```
+
+La salida se genera en `dist/`.
+
+### Opción A — arrastrar la carpeta
 
 1. Entra en [vercel.com/new](https://vercel.com/new)
 2. Arrastra esta carpeta completa a la zona de subida
-3. Vercel detecta que es un sitio estático y publica sin más configuración
+3. Vercel instala dependencias, ejecuta `npm run build` y publica `dist/`
 4. Te da una URL del tipo `https://mensajeria-app.vercel.app`
 
 ### Opción B — desde GitHub
@@ -54,11 +71,11 @@ La rama principal debe ser `main`.
 4. Usa esta configuración:
 
 ```text
-Framework Preset: Other
+Framework Preset: Vite
 Root Directory: ./
-Build Command: dejar vacío
-Output Directory: dejar vacío
-Install Command: dejar vacío
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
 Environment Variables: ninguna
 ```
 
