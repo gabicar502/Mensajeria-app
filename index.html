@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mensajeria-app · Campañas de WhatsApp y SMS para negocios</title>
+<meta name="description" content="Plataforma de mensajería para negocios: campañas por la API oficial de WhatsApp Business de Meta, SMS por Twilio y una sola bandeja para atender las respuestas. Con control de consentimiento.">
+<link rel="canonical" href="https://mensajeria-app.vercel.app/">
+<meta property="og:title" content="Mensajeria-app · Campañas de WhatsApp y SMS para negocios">
+<meta property="og:description" content="Campañas por WhatsApp oficial y SMS, con una bandeja unificada y control de consentimiento.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="barra">
+  <div class="envoltorio barra-fila">
+    <a class="marca" href="/"><span class="marca-punto" aria-hidden="true"></span> Mensajeria-app</a>
+    <nav class="barra-enlaces" aria-label="Secciones">
+      <a href="#servicio">Servicio</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#consentimiento">Consentimiento</a>
+      <a href="#negocio">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="portada">
+    <div class="envoltorio portada-caja">
+      <div>
+        <p class="eyebrow">Mensajería para negocios</p>
+        <h1>Escribe a miles. Responde a cada uno.</h1>
+        <p class="portada-entradilla">
+          Mensajeria-app envía campañas por la API oficial de WhatsApp Business y por SMS, y reúne todas las
+          respuestas en una sola bandeja. Solo escribe a quien dio su consentimiento.
+        </p>
+        <div class="acciones">
+          <a class="boton boton-primario" href="#negocio">Hablar con nosotros</a>
+          <a class="boton boton-secundario" href="#servicio">Ver qué hace</a>
+        </div>
+        <div class="estados" role="list" aria-label="Estados de entrega que registra la plataforma">
+          <span class="estado e-enviado" role="listitem">enviado</span>
+          <span class="estado e-entregado" role="listitem">entregado</span>
+          <span class="estado e-leido" role="listitem">leído</span>
+          <span class="estado e-fallido" role="listitem">fallido</span>
+        </div>
+      </div>
+
+      <div class="hilo">
+        <div class="hilo-cabecera">
+          <span class="hilo-avatar" aria-hidden="true">CR</span>
+          <div>
+            <div class="hilo-nombre">Carlos Ruiz</div>
+            <div class="mono" style="font-size:11.5px;color:var(--tinta-3)">+57 300 000 0000</div>
+          </div>
+        </div>
+        <div class="hilo-cuerpo">
+          <div class="globo globo-salida">
+            Hola Carlos, tenemos una promoción para ti este mes.
+            <span class="globo-meta">plantilla · 09:41 · leído</span>
+          </div>
+          <div class="globo globo-entrada">
+            ¿Me cuentas más?
+            <span class="globo-meta">10:04</span>
+          </div>
+          <div class="globo globo-salida">
+            Claro. Te explico las condiciones y los horarios disponibles.
+            <span class="globo-meta">agente · 10:06 · entregado</span>
+          </div>
+        </div>
+        <div class="hilo-pie">
+          <span class="estado e-leido">ventana abierta</span>
+          <span>Quedan 21 h para responder en este mismo hilo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicio">
+    <div class="envoltorio">
+      <div class="cabecera-seccion">
+        <p class="eyebrow">El servicio</p>
+        <h2>Lo que hace la plataforma</h2>
+        <p class="plomo">
+          Todo el ciclo de una campaña, desde cargar los contactos hasta atender la conversación que se abre
+          cuando alguien contesta.
+        </p>
+      </div>
+
+      <div class="rejilla">
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+          </span>
+          <h3>Campañas por WhatsApp oficial</h3>
+          <p>Envío masivo sobre la API oficial de WhatsApp Business, con plantillas aprobadas y variables por contacto.</p>
+        </div>
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          </span>
+          <h3>SMS como alternativa</h3>
+          <p>La misma audiencia por SMS tradicional, sola o en paralelo a WhatsApp, para llegar a quien no lo usa.</p>
+        </div>
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <h3>Una sola bandeja</h3>
+          <p>Las respuestas de todos los canales llegan al mismo sitio, con el historial completo de cada persona.</p>
+        </div>
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
+          </span>
+          <h3>Contactos desde Excel o CSV</h3>
+          <p>Importación sin límite de filas, con plantilla descargable. Normaliza los teléfonos a formato internacional y no duplica: si el número ya existe, actualiza la ficha.</p>
+        </div>
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+          </span>
+          <h3>Listas y segmentos por reglas</h3>
+          <p>Agrupa a mano o define reglas sobre etiquetas, consentimiento y campos propios (ciudad, sede, plan). El segmento se recalcula solo.</p>
+        </div>
+        <div class="celda">
+          <span class="celda-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+          </span>
+          <h3>Entrega verificable</h3>
+          <p>Cada destinatario deja su rastro: enviado, entregado, leído o fallido, con el motivo exacto del proveedor cuando algo no sale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="envoltorio">
+      <div class="cabecera-seccion">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>De la lista de contactos a la conversación</h2>
+        <p class="plomo">El orden importa: cada paso depende del anterior.</p>
+      </div>
+
+      <div class="pasos">
+        <div class="paso">
+          <span class="paso-num">PASO 1</span>
+          <div>
+            <h3>Cargas la audiencia</h3>
+            <p>Subes tu archivo de Excel o CSV, o creas los contactos a mano. Marcas quién dio su consentimiento para recibir mensajes comerciales.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <span class="paso-num">PASO 2</span>
+          <div>
+            <h3>Preparas la campaña</h3>
+            <p>Eliges la ruta de salida, la lista o el segmento y la plantilla aprobada. Queda en borrador: nada se envía hasta que confirmas.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <span class="paso-num">PASO 3</span>
+          <div>
+            <h3>Se envía por lotes</h3>
+            <p>Los mensajes salen a un ritmo controlado, respetando los límites del proveedor. Puedes pausar, reanudar y reintentar los que fallaron.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <span class="paso-num">PASO 4</span>
+          <div>
+            <h3>Atiendes las respuestas</h3>
+            <p>Quien contesta aparece en la bandeja con su conversación completa. La atención continúa desde ahí, sin salir de la plataforma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consentimiento">
+    <div class="envoltorio estrecho">
+      <div class="cabecera-seccion">
+        <p class="eyebrow">Consentimiento y buen uso</p>
+        <h2>Solo escribimos a quien quiere que le escribamos</h2>
+      </div>
+
+      <div class="aviso-fuerte">
+        <p>
+          La mensajería comercial funciona a base de permiso. Un envío a personas que no lo pidieron acaba en bloqueos,
+          en reportes y en la pérdida de la línea. Por eso el consentimiento no es una casilla decorativa en esta
+          plataforma: es un requisito para poder enviar.
+        </p>
+        <ul class="lista-limpia">
+          <li><span class="tic" aria-hidden="true">✓</span> Cada contacto guarda si dio su consentimiento y cuándo.</li>
+          <li><span class="tic" aria-hidden="true">✓</span> Las campañas <strong>excluyen automáticamente</strong> a quien no lo tiene, aunque esté en la lista.</li>
+          <li><span class="tic" aria-hidden="true">✓</span> Toda campaña se envía con una plantilla revisada y aprobada previamente por el proveedor.</li>
+          <li><span class="tic" aria-hidden="true">✓</span> Quien pide dejar de recibir mensajes se marca sin consentimiento y deja de entrar en cualquier envío.</li>
+          <li><span class="tic" aria-hidden="true">✓</span> Los datos personales se tratan conforme a la Ley 1581 de 2012 de protección de datos de Colombia.</li>
+        </ul>
+        <p style="font-size:14.5px">
+          Puedes revocar tu consentimiento en cualquier momento respondiendo al mensaje o escribiéndonos por los medios
+          de contacto de esta página. Los detalles están en la <a href="privacidad.html">política de privacidad</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="negocio">
+    <div class="envoltorio">
+      <div class="cabecera-seccion">
+        <p class="eyebrow">Datos del negocio</p>
+        <h2>Quiénes somos y cómo contactarnos</h2>
+        <p class="plomo">Para consultas sobre el servicio, o para ejercer tus derechos sobre tus datos personales.</p>
+      </div>
+
+      <dl class="datos">
+        <div class="dato">
+          <dt>Nombre del negocio</dt>
+          <dd>Mensajeria-app</dd>
+        </div>
+        <div class="dato">
+          <dt>Correo de contacto</dt>
+          <dd><a href="mailto:gabicar502@gmail.com">gabicar502@gmail.com</a></dd>
+        </div>
+        <div class="dato">
+          <dt>Dirección</dt>
+          <dd>KR 1 C 14 85, Piso 2 Apto 201<br>Florencia, Caquetá 180001<br>Colombia</dd>
+        </div>
+        <div class="dato">
+          <dt>Teléfono</dt>
+          <dd class="mono">+57 302 592 9228</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="envoltorio">
+    <div class="pie-fila">
+      <div>
+        <a class="marca" href="/"><span class="marca-punto" aria-hidden="true"></span> Mensajeria-app</a>
+        <p class="plomo" style="font-size:14.5px;margin-top:8px;max-width:22rem">
+          Campañas de WhatsApp y SMS con consentimiento, y una bandeja para atender lo que llega después.
+        </p>
+      </div>
+      <nav class="pie-enlaces" aria-label="Enlaces legales">
+        <a href="#servicio">Servicio</a>
+        <a href="#negocio">Contacto</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos del servicio</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <p>© 2026 Mensajeria-app. Florencia, Caquetá, Colombia.</p>
+      <p>
+        WhatsApp, WhatsApp Business y Meta son marcas de Meta Platforms, Inc. Twilio es una marca de Twilio Inc.
+        Mensajeria-app usa sus servicios como proveedores y no está afiliada, patrocinada ni respaldada por ellos.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
