@@ -88,7 +88,23 @@ El archivo `vercel.json` activa URLs limpias, así que Vercel podrá servir tant
 
 ## Dominio recomendado
 
-Usa `www.mensajeria.com` como dominio principal y deja `mensajeria.com` redirigiendo hacia `www.mensajeria.com`.
+Usa `www.mensajeria-app.com` como dominio principal y deja `mensajeria-app.com` redirigiendo hacia
+`www.mensajeria-app.com`.
+
+En el proveedor donde compraste el dominio, crea estos DNS:
+
+```text
+Type: CNAME
+Name / Host: www
+Value / Target: cname.vercel-dns.com
+```
+
+```text
+Type: A
+Name / Host: @
+Value: 76.76.21.21
+```
+
 No uses nombres anteriores del negocio en Vercel, GitHub ni DNS.
 
 ### Con dominio propio
