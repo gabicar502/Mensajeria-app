@@ -6,10 +6,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        plantillas: resolve(__dirname, "plantillas.html"),
         privacidad: resolve(__dirname, "privacidad.html"),
         terminos: resolve(__dirname, "terminos.html")
       }
     }
   }
 });
-

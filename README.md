@@ -6,6 +6,7 @@ Sitio estático de tres páginas preparado para publicarse en Vercel con Vite.
 index.html        Portada: servicio, cómo funciona, consentimiento y datos del negocio
 privacidad.html   Política de privacidad (Ley 1581 de 2012)
 terminos.html     Términos del servicio
+plantillas.html   Editor y tabla de plantillas de Meta
 estilos.css       Estilos compartidos por las tres páginas
 package.json      Scripts de desarrollo y build
 vite.config.js    Build multipágina para incluir todos los HTML

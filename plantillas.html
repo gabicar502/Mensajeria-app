@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plantillas de Meta · Mensajeria-app</title>
+<meta name="description" content="Editor y tabla de plantillas de WhatsApp Business para Mensajeria-app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="estilos.css">
+<script type="module" src="plantillas.js"></script>
+</head>
+<body>
+
+<header class="barra">
+  <div class="envoltorio barra-fila">
+    <a class="marca" href="/"><span class="marca-punto" aria-hidden="true"></span> Mensajeria-app</a>
+    <nav class="barra-enlaces" aria-label="Secciones">
+      <a href="index.html#servicio">Servicio</a>
+      <a href="plantillas.html">Plantillas</a>
+      <a href="index.html#negocio">Contacto</a>
+      <a href="privacidad.html">Privacidad</a>
+    </nav>
+  </div>
+</header>
+
+<main class="panel-plantillas">
+  <section class="plantillas-hero">
+    <div class="envoltorio panel-cabecera">
+      <div>
+        <p class="eyebrow">WhatsApp Business</p>
+        <h1>Plantillas de Meta</h1>
+        <p class="plomo">
+          Redacta mensajes preaprobados, revisa sus variables y mantén visible el estado de aprobación antes de usarlos en campañas.
+        </p>
+      </div>
+      <div class="panel-metricas" aria-label="Resumen de plantillas">
+        <div>
+          <span id="metricTotal">0</span>
+          <small>Total</small>
+        </div>
+        <div>
+          <span id="metricAprobadas">0</span>
+          <small>Aprobadas</small>
+        </div>
+        <div>
+          <span id="metricRevision">0</span>
+          <small>En revisión</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-banda">
+    <div class="envoltorio tablero-plantillas">
+      <div class="bloque-panel bloque-editor">
+        <div class="bloque-titulo">
+          <div>
+            <p class="eyebrow">Editor</p>
+            <h2>Nueva plantilla</h2>
+          </div>
+          <button class="boton boton-secundario boton-compacto" type="button" id="btnLimpiar">Limpiar</button>
+        </div>
+
+        <form id="formPlantilla" class="formulario-plantilla">
+          <div class="campo-doble">
+            <label>
+              Nombre interno
+              <input id="nombrePlantilla" name="nombre" type="text" value="pedido_para_recoger" required>
+            </label>
+            <label>
+              Categoría
+              <select id="categoriaPlantilla" name="categoria">
+                <option value="UTILITY">Utility</option>
+                <option value="MARKETING">Marketing</option>
+                <option value="AUTHENTICATION">Authentication</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="campo-doble">
+            <label>
+              Idioma
+              <select id="idiomaPlantilla" name="idioma">
+                <option value="es_CO">Español Colombia</option>
+                <option value="es">Español</option>
+                <option value="en_US">Inglés Estados Unidos</option>
+              </select>
+            </label>
+            <label>
+              Estado
+              <select id="estadoPlantilla" name="estado">
+                <option value="Borrador">Borrador</option>
+                <option value="En revisión">En revisión</option>
+                <option value="Aprobada">Aprobada</option>
+                <option value="Rechazada">Rechazada</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Encabezado opcional
+            <input id="encabezadoPlantilla" name="encabezado" type="text" value="Pedido para recoger #{{1}}">
+          </label>
+
+          <label>
+            Cuerpo del mensaje
+            <textarea id="cuerpoPlantilla" name="cuerpo" rows="9" required>Hola {{1}}, tu pedido #{{2}} fue recibido.
+
+Detalle:
+{{3}}
+
+Total a pagar: {{4}}
+Sede de recogida: {{5}}</textarea>
+          </label>
+
+          <label>
+            Pie opcional
+            <input id="piePlantilla" name="pie" type="text" value="Mensajeria-app">
+          </label>
+
+          <div class="campo-doble">
+            <label>
+              Botón 1
+              <input id="botonUnoPlantilla" name="botonUno" type="text" value="Ver mapa">
+            </label>
+            <label>
+              Botón 2
+              <input id="botonDosPlantilla" name="botonDos" type="text" value="Hablar con asesor">
+            </label>
+          </div>
+
+          <div class="variables-panel">
+            <div>
+              <strong>Variables detectadas</strong>
+              <p id="variablesDetectadas" class="mono">Sin variables</p>
+            </div>
+            <button class="boton boton-primario" type="submit">Guardar plantilla</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="bloque-panel bloque-vista" aria-label="Vista previa">
+        <div class="bloque-titulo">
+          <div>
+            <p class="eyebrow">Vista previa</p>
+            <h2>WhatsApp</h2>
+          </div>
+          <span id="previewCategoria" class="estado e-leido">UTILITY</span>
+        </div>
+        <div class="telefono-preview">
+          <div class="telefono-barra">
+            <span class="hilo-avatar" aria-hidden="true">MA</span>
+            <div>
+              <strong>Mensajeria-app</strong>
+              <span>cuenta de empresa</span>
+            </div>
+          </div>
+          <div class="telefono-cuerpo">
+            <article class="mensaje-template">
+              <h3 id="previewEncabezado">Pedido para recoger #6720</h3>
+              <p id="previewCuerpo"></p>
+              <footer id="previewPie">Mensajeria-app</footer>
+              <div class="preview-botones" id="previewBotones"></div>
+            </article>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="panel-banda tabla-banda">
+    <div class="envoltorio">
+      <div class="bloque-panel">
+        <div class="bloque-titulo">
+          <div>
+            <p class="eyebrow">Registro</p>
+            <h2>Tabla de plantillas</h2>
+          </div>
+          <button class="boton boton-secundario boton-compacto" type="button" id="btnEjemplos">Restaurar ejemplos</button>
+        </div>
+        <div class="tabla-envoltorio tabla-plantillas">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Idioma</th>
+                <th>Variables</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="tablaPlantillas"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltorio">
+    <div class="pie-fila">
+      <a class="marca" href="/"><span class="marca-punto" aria-hidden="true"></span> Mensajeria-app</a>
+      <nav class="pie-enlaces" aria-label="Enlaces legales">
+        <a href="index.html">Inicio</a>
+        <a href="plantillas.html">Plantillas de Meta</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos del servicio</a>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <p>© 2026 Mensajeria-app. Florencia, Caquetá, Colombia.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
