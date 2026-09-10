@@ -86,6 +86,11 @@ Cada `git push` republicará el sitio.
 El archivo `vercel.json` activa URLs limpias, así que Vercel podrá servir tanto `/privacidad` como
 `/privacidad.html`.
 
+## Dominio recomendado
+
+Usa `www.mensajeria.com` como dominio principal y deja `mensajeria.com` redirigiendo hacia `www.mensajeria.com`.
+No uses nombres anteriores del negocio en Vercel, GitHub ni DNS.
+
 ### Con dominio propio
 
 En Vercel: *Settings → Domains → Add*, y sigue las instrucciones de DNS. Para la verificación de Meta,
